@@ -7,6 +7,7 @@ import {
 import {Separator} from "@/components/ui/separator";
 import {SidebarTrigger} from "@/components/ui/sidebar";
 import {WorkflowCard} from "@/components/workflow-card";
+import {workflows} from "./contants";
 
 export default function Page() {
  return (
@@ -26,72 +27,9 @@ export default function Page() {
    </header>
    <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
     <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
-     <WorkflowCard
-      card_title="Job Application"
-      card_description="Explore bulk job application"
-      button_text="Explore Workflow"
-      badges={["LinkedIn", "Indeed", "Remote", "Full-time"]}
-     />
+     {workflows.map((workflow) => (
+      <WorkflowCard key={workflow.id} {...workflow} />
+     ))}
     </div>
    </div>
   </>

@@ -3,7 +3,6 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton
 } from '@clerk/nextjs'
 import { AppSidebar } from "@/components/app-sidebar"
 import {
