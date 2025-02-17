@@ -10,6 +10,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import './globals.css'
+import { Toaster } from "@/components/ui/toaster";
 
 export default function RootLayout({
   children,
@@ -29,6 +30,7 @@ export default function RootLayout({
             <SidebarProvider>
               <AppSidebar />
               <SidebarInset>
+              <Toaster />
                 {children}
               </SidebarInset>
             </SidebarProvider>
